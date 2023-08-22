@@ -1,0 +1,106 @@
+<html lang="en">
+	<head>
+		<title>500</title>
+		<meta charset="UTF-8" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" type="text/css" href="https://cdn.statically.io/gh/AutoHQ/Assets/main/css/normal.css" />
+		<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet" />
+		<style>
+			* {
+				font-family: 'Outfit', sans-serif;
+			}
+			body {
+				display: flex;
+				overflow: hidden;
+				background: #fbfbfb;
+				place-items: center;
+				justify-content: center;
+			}
+			p {
+				font-size: 50px;
+			}
+			.box {
+				text-align: center;
+				/* background: rgba(255, 255, 255, 0.4); */
+				color: #000;
+				margin-top: -6%;
+			}
+			.big-bg {
+				left: 0;
+				opacity: 0.03;
+				bottom: -2.5rem;
+				font-size: 21vw;
+				font-weight: 300;
+				user-select: none;
+				position: absolute;
+				z-index: -10;
+			}
+			.error-code {
+				font-size: 120px;
+			}
+			.error-title {
+				opacity: 0.8;
+				font-size: 3rem;
+			}
+			.error-description {
+				opacity: 0.4;
+				margin-top: 1rem;
+				font-size: 1.4rem;
+			}
+			.btns {
+				gap: 1rem;
+				display: flex;
+				margin-top: 2rem;
+			}
+			.btns button {
+				flex: 1;
+			}
+			#btn-report {
+				flex: 2;
+				color: white;
+				font-size: 1rem;
+				font-weight: 400;
+				background: #000;
+			}
+			#btn-report:hover {
+				color: #000;
+				background: #4affed;
+				transition-duration: 400ms;
+			}
+			.copy-right {
+				right: 2rem;
+				bottom: 1.5rem;
+				opacity: 0.5;
+				cursor: pointer;
+				position: absolute;
+				transition: 300ms all ease-in;
+			}
+			.copy-right:hover {
+				opacity: 1;
+			}
+			@media screen and (max-width: 400px) {
+				.big-bg {
+					display: none;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="big-bg">Oops...</div>
+		<div class="box">
+			<h1 class="error-code">500</h1>
+			<p class="error-title">Server Error</p>
+			<p class="error-description">Please try again a few minutes later.</p>
+			<div class="btns">
+				<button id="btn-go-back" onclick="history.go(-1)">Go Back</button>
+				<button id="btn-report" title="care@auto-hq.com" onclick="window.open('mailto:amir@auto-hq.com')">Report to AutoHQ</button>
+			</div>
+		</div>
+		<div onclick="window.open('https://autohq.tech')" class="copy-right">© 2023 <strong>AutoHQ</strong></div>
+		<script>
+			if (history.length <= 1) document.querySelector('#btn-go-back').remove();
+		</script>
+	</body>
+</html>

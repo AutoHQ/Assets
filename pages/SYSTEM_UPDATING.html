@@ -1,11 +1,11 @@
 <html lang="en">
 	<head>
-		<title>System is Updating</title>
 		<meta charset="UTF-8" />
+		<title>System is Updating</title>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" type="text/css" href="https://cdn.statically.io/gh/AutoHQ/Assets/main/css/normal.css" />
+		<link rel="stylesheet" type="text/css" href="https://autohq.github.io/Assets/css/normal.css" />
 		<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet" />
 		<style>
 			* {
@@ -81,15 +81,23 @@
 			.copy-right:hover {
 				opacity: 1;
 			}
-			@media screen and (max-width: 400px) {
+			@media screen and (max-width: 500px) {
 				.big-bg {
-					display: none;
+					bottom: -0.5rem;
+				}
+				.box {
+					margin-top: -10vh;
 				}
 				.error-title {
 					font-size: 2.2rem;
+					white-space: nowrap;
 				}
 				.error-description {
 					font-size: 1rem;
+					white-space: nowrap;
+				}
+				.copy-right {
+					bottom: 2rem;
 				}
 			}
 			@keyframes flashing {
